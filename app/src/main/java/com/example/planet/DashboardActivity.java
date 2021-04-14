@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.Network;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
@@ -93,15 +94,18 @@ public class DashboardActivity extends AppCompatActivity {
     public void translate(){
 
         originalText = lang1.getText().toString();
-        Translation translation = translate.translate (originalText, translate.("tr"), Translate.TranslateOption.model("base"));
+        Translation translation = translate.translate (originalText, com.google.cloud.translate.Translate.TranslateOption.targetLanguage("tr"), com.google.cloud.translate.Translate.TranslateOption.model("base"));
         translatedText =translation.getTranslatedText();
 
         lang2.setText(translatedText);
     }
 
+ @RequiresApi(api = Build.VERSION_CODES.P)
  public boolean checkInternetConnection() {
-     ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTVITY_SERVICE);
-     connected= ConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState()== NetworkInfo.State.CONNECTED ||
+     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+     }
+     connected= ConnectivityManager.getNetworkInfo(Network.fromNetworkHandle(ConnectivityManager.TYPE_MOBILE)).getState()== NetworkInfo.State.CONNECTED ||
              ConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState()== NetworkInfo.State.CONNECTED;
 
      return connected;
