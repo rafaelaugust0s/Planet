@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegistrationActivity">
+
+    <EditText
+        android:id="@+id/TextRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="REGISTER" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="10pt"
+                android:layout_height="30pt"
+                android:layout_margin="10pt"
+                android:gravity="center"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/TextName"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="10pt"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="10pt"
+                android:gravity="center"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/TextEmail"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="10pt"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"
+                android:text="" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewPassword"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="10pt"
+                android:gravity="center"
+                android:text="Password" />
+
+            <EditText
+                android:id="@+id/TextPassword"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="10pt"
+                android:layout_weight="1"
+                android:inputType="textPassword"
+                android:text="" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/register"
+                android:layout_width="60pt"
+                android:layout_height="30pt"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="20pt"
+                android:onClick="registerEvent"
+                android:text="REGISTER" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
