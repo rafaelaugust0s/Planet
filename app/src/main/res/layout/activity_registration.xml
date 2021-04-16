@@ -5,16 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegistrationActivity">
+    tools:context=".RegistrationActivity"
+    android:background="@drawable/yellow_planet"
+    android:layout_marginTop="50pt"
+    >
 
-    <EditText
+    <TextView
         android:id="@+id/TextRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:text="REGISTER" />
+        android:background="@drawable/passport"/>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -26,15 +28,15 @@
 
             <TextView
                 android:id="@+id/textViewName"
-                android:layout_width="10pt"
+                android:layout_width="5pt"
                 android:layout_height="30pt"
                 android:layout_margin="10pt"
-                android:gravity="center"
+                android:gravity=""
                 android:text="Name" />
 
             <EditText
                 android:id="@+id/TextName"
-                android:layout_width="30pt"
+                android:layout_width="3pt"
                 android:layout_height="30pt"
                 android:layout_margin="10pt"
                 android:layout_weight="1"
@@ -51,7 +53,7 @@
                 android:layout_width="30pt"
                 android:layout_height="30pt"
                 android:layout_margin="10pt"
-                android:gravity="center"
+                android:gravity=""
                 android:text="Email" />
 
             <EditText
@@ -74,7 +76,7 @@
                 android:layout_width="30pt"
                 android:layout_height="30pt"
                 android:layout_margin="10pt"
-                android:gravity="center"
+                android:gravity=""
                 android:text="Password" />
 
             <EditText
@@ -101,7 +103,8 @@
                 android:layout_weight="1"
                 android:layout_margin="20pt"
                 android:onClick="registerEvent"
-                android:text="REGISTER" />
+                android:text="REGISTER"
+                />
         </TableRow>
 
     </TableLayout>

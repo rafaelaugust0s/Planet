@@ -8,28 +8,28 @@
     tools:context=".MainActivity">
 
 
-    <EditText
+    <TextView
         android:id="@+id/TextPlanet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@drawable/lang2"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:text="PLANET" />
+        android:text="" />
 
 
     <TextView
         android:id="@+id/lblMsg"
-        android:text=" "
-        android:gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="30pt"
-        android:layout_width="match_parent"/>
+        android:gravity="center"
+        android:text=" " />
 
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <TableRow
             android:layout_width="match_parent"
@@ -56,48 +56,47 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textViewPassword"
-            android:layout_width="30pt"
-            android:layout_height="30pt"
-            android:layout_margin="10pt"
-            android:gravity="center"
-            android:text="Password" />
+            <TextView
+                android:id="@+id/textViewPassword"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="10pt"
+                android:gravity="center"
+                android:text="Password" />
 
-        <EditText
-            android:id="@+id/TextPassword"
-            android:layout_width="30pt"
-            android:layout_height="30pt"
-            android:layout_margin="10pt"
-            android:layout_weight="1"
-            android:inputType="textPassword"
-            android:text="" />
+            <EditText
+                android:id="@+id/TextPassword"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_margin="10pt"
+                android:layout_weight="1"
+                android:inputType="textPassword"
+                android:text="" />
         </TableRow>
 
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login"
-                android:text="LOGIN"
-                android:onClick="loginEvent"
-                android:layout_margin="15pt"
                 android:layout_width="60pt"
                 android:layout_height="30pt"
-                />
+                android:layout_margin="15pt"
+                android:onClick="loginEvent"
+                android:text="LOGIN" />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/register"
-                android:text="REGISTER"
-                android:onClick="registerEvent"
-                android:layout_margin="15pt"
                 android:layout_width="60pt"
                 android:layout_height="30pt"
-                />
-       </TableRow>
+                android:layout_margin="15pt"
+                android:onClick="registerEvent"
+                android:text="REGISTER" />
+        </TableRow>
 
 
     </TableLayout>
